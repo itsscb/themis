@@ -20,7 +20,7 @@
             <td>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <p-calendar [(ngModel)]="task.begin" [showTime]="true"></p-calendar>
+                        <p-calendar [appendTo]="'body'" [(ngModel)]="task.begin" [showTime]="true" hourFormat="24" dateFormat="yy-mm-dd" timeFormat="HH:mm"></p-calendar>
                     </ng-template>
                     <ng-template pTemplate="output">{{task.begin | date:'yyyy-MM-dd HH:mm:ss'}}</ng-template>
                 </p-cellEditor>
@@ -28,7 +28,7 @@
             <td>
                 <p-cellEditor>
                     <ng-template pTemplate="input">
-                        <p-calendar [(ngModel)]="task.end" [showTime]="true"></p-calendar>
+                        <p-calendar [appendTo]="'body'" [(ngModel)]="task.end" [showTime]="true" hourFormat="24" dateFormat="yy-mm-dd" timeFormat="HH:mm"></p-calendar>
                     </ng-template>
                     <ng-template pTemplate="output">{{task.end | date:'yyyy-MM-dd HH:mm:ss'}}</ng-template>
                 </p-cellEditor>
@@ -40,9 +40,12 @@
                     <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times" (click)="onRowEditCancel(product, ri)" class="p-button-rounded p-button-text p-button-danger"></button>
                 </div>
             </td>
-            <!-- <td>{{ task.title }}</td>
-            <td>{{ task.begin | date:'yyyy-MM-dd HH:mm:ss'}}</td>
-            <td>{{ task.end | date:'yyyy-MM-dd HH:mm:ss' }}</td> -->
         </tr>
+    </ng-template>
+
+    <ng-template pTemplate="summary">
+        <div class="flex align-items-center justify-content-between">
+            In total there are {{tasks ? tasks.length : 0 }} tasks.
+        </div>
     </ng-template>
 </p-table>
