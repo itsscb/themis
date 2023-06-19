@@ -1,16 +1,48 @@
-<p-table [value]="tasks" [tableStyle]="{ 'min-width': '50rem'}">
+<p-table [value]="tasks" dataKey="id" editMode="row" [tableStyle]="{ 'min-width': '50rem'}">
     <ng-template pTemplate="header">
         <tr>
-            <th>Title</th>
-            <th>Begin</th>
-            <th>End</th>
+            <th pSortableColumn="title">Title</th>
+            <th pSortableColumn="begin">Begin</th>
+            <th pSortableColumn="end">End</th>
+            <th style="width: 4rem;"></th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-task>
-        <tr>
-            <td>{{ task.title }}</td>
+    <ng-template pTemplate="body" let-task let-editing="editing" let-ri="rowIndex">
+        <tr [pEditableRow]="task">
+            <td>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <input pInputText type="text" [(ngModel)]="task.title">
+                    </ng-template>
+                    <ng-template pTemplate="output">{{task.title}}</ng-template>
+                </p-cellEditor>
+            </td>
+            <td>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <p-calendar [(ngModel)]="task.begin" [showTime]="true"></p-calendar>
+                    </ng-template>
+                    <ng-template pTemplate="output">{{task.begin | date:'yyyy-MM-dd HH:mm:ss'}}</ng-template>
+                </p-cellEditor>
+            </td>
+            <td>
+                <p-cellEditor>
+                    <ng-template pTemplate="input">
+                        <p-calendar [(ngModel)]="task.end" [showTime]="true"></p-calendar>
+                    </ng-template>
+                    <ng-template pTemplate="output">{{task.end | date:'yyyy-MM-dd HH:mm:ss'}}</ng-template>
+                </p-cellEditor>
+            </td>
+            <td>
+                <div class="flex align-items-center justify-content-center gap-2">
+                    <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil" (click)="onRowEditInit(product)" class="p-button-rounded p-button-text"></button>
+                    <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check" (click)="onRowEditSave(product)" class="p-button-rounded p-button-text p-button-success mr-2"></button>
+                    <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times" (click)="onRowEditCancel(product, ri)" class="p-button-rounded p-button-text p-button-danger"></button>
+                </div>
+            </td>
+            <!-- <td>{{ task.title }}</td>
             <td>{{ task.begin | date:'yyyy-MM-dd HH:mm:ss'}}</td>
-            <td>{{ task.end | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+            <td>{{ task.end | date:'yyyy-MM-dd HH:mm:ss' }}</td> -->
         </tr>
     </ng-template>
 </p-table>
