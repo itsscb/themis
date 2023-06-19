@@ -4,12 +4,12 @@ import {AppMainComponent} from './app.main.component';
 @Component({
     selector: 'app-topbar',
     template: `
-        <div class="layout-topbar" style="background-color: white">
+        <div class="layout-topbar" style="background-color: white; padding-top: 2rem;">
 			<div class="layout-topbar-wrapper">
                 <div class="layout-topbar-left">
 					<div class="layout-topbar-logo-wrapper">
 						<a href="#" >
-							<img src="assets/logo.svg" alt="themis-logo" style="width: 8rem; height: 8rem;"/>
+							<img src="assets/logo.svg" alt="themis-logo" style="width: 8rem; height: 8rem; margin-bottom: 2rem;"/>
 						</a>
 					</div>
 
