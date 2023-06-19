@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 b14acf9f90d9079fb1a19c180a769cd9a0e68650 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1658999527 +0300	clone: from https://github.com/primefaces/mirage-ng.git
+b14acf9f90d9079fb1a19c180a769cd9a0e68650 facb8c69848b6e4d75d3e0b7de486506bac6058b Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1658999788 +0300	commit: update gitignore
+facb8c69848b6e4d75d3e0b7de486506bac6058b 4020cca57b34e77235d26112ecc370ce797603a7 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1658999844 +0300	commit: update gitignore
+4020cca57b34e77235d26112ecc370ce797603a7 f4475ea626298cec16fc5d57b34f4137772446c1 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1658999892 +0300	commit: Remove empty folder
+f4475ea626298cec16fc5d57b34f4137772446c1 7c957735aa887cdf385c5936b3417e58e14940c4 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1659000534 +0300	commit: Add missing variable
+7c957735aa887cdf385c5936b3417e58e14940c4 282acf3e7bb87a2dc0f601ee8ba9d7d8653cae45 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1659000548 +0300	commit: Fix calendar cell focus background
+282acf3e7bb87a2dc0f601ee8ba9d7d8653cae45 3c0ad42d5d3b96a7cb77ca1004cd20bd29fdc8fe Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1659014669 +0300	commit: Update build output path
+3c0ad42d5d3b96a7cb77ca1004cd20bd29fdc8fe 21699c8af30c25c84c4d5095fa435dfd7189dc34 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1659344435 +0300	commit: Fix menu bug and set new version
+21699c8af30c25c84c4d5095fa435dfd7189dc34 8270ffbd688508362c10ea78065da983b41ce1b9 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1674503680 +0300	commit: update to v15
+8270ffbd688508362c10ea78065da983b41ce1b9 134faac3eb6e22e65017829cab69b76243b4ad37 Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1674571757 +0300	commit: update fullcalendar
+134faac3eb6e22e65017829cab69b76243b4ad37 efe8cd56076abadad12d2db41feeef832ea348ca Çetin <69278826+cetincakiroglu@users.noreply.github.com> 1674571765 +0300	commit: Fix typo

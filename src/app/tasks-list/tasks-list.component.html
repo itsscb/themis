@@ -1,0 +1,16 @@
+<p-table [value]="tasks" [tableStyle]="{ 'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Title</th>
+            <th>Begin</th>
+            <th>End</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-task>
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>{{ task.begin | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+            <td>{{ task.end | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+        </tr>
+    </ng-template>
+</p-table>
